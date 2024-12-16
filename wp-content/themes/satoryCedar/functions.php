@@ -8,4 +8,8 @@ function satory_tree_theme_setup() {
 add_action( 'after_setup_theme', 'satory_tree_theme_setup' );
 
 // Additional functions
+function my_theme_enqueue_styles() {
+    wp_enqueue_style( 'my-theme-style', get_stylesheet_uri(), array(), time() ); // Time adds versioning
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
