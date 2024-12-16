@@ -2,8 +2,7 @@
 /*
 Template Name: Landing Page
 */
-get_header();
-?>
+get_header(); ?>
 
 <main class="landing-page">
     <section class="hero">
