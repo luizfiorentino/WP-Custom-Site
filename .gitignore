@@ -1,0 +1,7 @@
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/advanced-cache.php
+node_modules/
+vendor/
+.htaccess
