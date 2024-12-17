@@ -13,3 +13,29 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
+function subtitle_metabox() {
+    add_meta_box(
+        'subtitle_metabox_id',             
+        'Subtitle',      
+        'subtitle_metabox_callback',       
+        'post',                      // Screen: 'post' or 'page'
+        'side'                       // Location: 'normal', 'side', 'advanced'
+    );
+}
+add_action( 'add_meta_boxes', 'subtitle_metabox' );
+
+// Metabox content
+function subtitle_metabox_callback( $post ) {
+    echo '<label for="custom_subtitle_field">Enter Value:</label>';
+    echo '<input type="text" name="custom_subtitle_field" id="custom_subtitle_field" value="' . get_post_meta( $post->ID, 'custom_subtitle_field', true ) . '" />';
+}
+
+function save_custom_meta_subtitle( $post_id ) {
+    if ( isset( $_POST['custom_subtitle_field'] ) ) {
+        update_post_meta( $post_id, 'custom_subtitle_field', sanitize_text_field( $_POST['custom_subtitle_field'] ) );
+    }
+}
+add_action( 'save_post', 'save_custom_meta_subtitle' );
+
+
+

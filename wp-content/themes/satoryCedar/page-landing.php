@@ -17,6 +17,12 @@ get_header(); ?>
     <h2>Our Features</h2>
     <p>Dazzle yourself by discovering how design and functionality integrate to give wings to your imagination</p>
 </section>
+<?php
+    $custom_value = get_post_meta( get_the_ID(), 'my_custom_field', true );
+    if ( ! empty( $custom_value ) ) {
+        echo '<p>Custom Field Value: ' . esc_html( $custom_value ) . '</p>';
+    }
+    ?>
 
 </main>
 
