@@ -37,7 +37,8 @@
 }
 
 .hero {
-  background: url("path/to/hero-image.jpg") no-repeat center center;
+  background: url("https://t3.ftcdn.net/jpg/09/18/91/54/360_F_918915454_MteEeDG12I5H7YbVec3ryyq2AXRtJInp.jpg")
+    no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 100px 20px;

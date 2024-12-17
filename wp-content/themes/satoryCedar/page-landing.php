@@ -8,6 +8,9 @@ get_header(); ?>
     <section class="hero">
         <h1>Welcome to Satory Cedar</h1>
         <p>Enjoy the beauty of natural designs</p>
+        <h1><?php the_title(); ?></h1>
+<div><?php the_content(); ?></div>
+
 </section>
 
 <section class="features">
