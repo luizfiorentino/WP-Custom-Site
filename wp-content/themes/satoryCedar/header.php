@@ -15,12 +15,14 @@
                 </a>
             </h1>
             <nav class="main-navigation">
+                <div class="iconItems">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'primary',
                     'menu_class'     => 'primary-menu',
                 ) );
                 ?>
+                </div>
             </nav>
         </div>
     </header>
