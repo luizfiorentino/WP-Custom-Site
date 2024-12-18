@@ -14,12 +14,16 @@
                     <?php bloginfo( 'name' ); ?>
                 </a>
             </h1>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+            &#9776;
+        </button>
             <nav class="main-navigation">
                 <div class="iconItems">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'primary',
                     'menu_class'     => 'primary-menu',
+                    'container_id'   => 'primary-menu',
                 ) );
                 ?>
                 </div>

@@ -7,6 +7,12 @@
  Version: 1.0
  */
 
+html,
+body {
+  margin: 0 !important;
+  padding: 0;
+}
+
 ul {
   margin: 0;
 }
@@ -29,15 +35,9 @@ ul {
 
 .main-navigation {
   border: 1px solid green;
-  display: flex;
 }
 
 .primary-menu {
-  width: 100% !important;
-  display: none !important;
-  background-color: red;
-  display: flex !important;
-  list-style: none !important;
 }
 
 .main-navigation .primary-menu {
@@ -56,6 +56,7 @@ ul {
 }
 
 .iconItems {
+  background-color: yellow;
 }
 
 .hero {
@@ -66,4 +67,57 @@ ul {
   color: dodgerblue;
   padding: 100px 20px;
   text-align: center;
+}
+
+/* General styles */
+.main-navigation {
+  display: none; /* Hidden by default for mobile */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+}
+
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.menu-toggle {
+  display: block; /* Show the button on mobile */
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Tablet and Desktop View */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Hide the toggle button */
+  }
+  .main-navigation {
+    display: block; /* Always show the menu */
+    position: static;
+    width: auto;
+    background: transparent;
+  }
+  .main-navigation ul {
+    display: flex; /* Align links horizontally */
+  }
+  .main-navigation a {
+    color: #333; /* Adjust link color for desktop */
+    padding: 10px 15px;
+  }
 }

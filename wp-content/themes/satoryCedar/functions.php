@@ -11,7 +11,7 @@ add_action( 'after_setup_theme', 'satory_tree_theme_setup' );
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'my-theme-style', get_stylesheet_uri(), array(), time() ); 
 }
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles', 20 );
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 function subtitle_metabox() {
     add_meta_box(
@@ -36,6 +36,12 @@ function save_custom_meta_subtitle( $post_id ) {
     }
 }
 add_action( 'save_post', 'save_custom_meta_subtitle' );
+
+function theme_enqueue_scripts() {
+    wp_enqueue_script( 'menu-toggle', get_template_directory_uri() . '/js/menu.js', array(), null, true );
+}
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
+
 
 
 
