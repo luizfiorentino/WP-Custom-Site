@@ -37,10 +37,32 @@ ul {
 }
 
 .main-navigation {
-  border: 1px solid green;
+  max-width: 50%;
+  background-color: olivedrab;
+  opacity: 0.5;
+  position: absolute !important;
+  top: 7rem !important;
+  z-index: 99;
+  font-size: 22px;
 }
 
 .primary-menu {
+}
+
+.main-navigation {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  color: #fff;
+  max-width: 50%;
+  background-color: olivedrab;
+  opacity: 0.5;
+  position: absolute !important;
+  top: 7rem !important;
+  z-index: 99;
+  font-size: 22px;
 }
 
 .main-navigation .primary-menu {
@@ -54,7 +76,11 @@ ul {
 }
 
 .main-navigation .primary-menu li a {
-  color: dodgerblue;
+  display: flex;
+  justify-content: right;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  /* color: dodgerblue; */
   text-decoration: none;
 }
 
@@ -72,16 +98,6 @@ ul {
   text-align: center;
 }
 
-/* General styles */
-.main-navigation {
-  display: none;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  color: #fff;
-}
-
 .main-navigation ul {
   list-style: none;
   margin: 0;
@@ -96,7 +112,7 @@ ul {
 }
 
 .menu-toggle {
-  display: block; /* Show the button on mobile */
+  display: block;
   background: none;
   border: none;
   color: #333;
