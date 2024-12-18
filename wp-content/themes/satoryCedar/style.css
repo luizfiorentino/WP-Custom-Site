@@ -9,7 +9,7 @@
 
 html,
 body {
-  margin: 0 !important;
+  /* margin: 0 !important; */
   padding: 0;
 }
 
@@ -21,6 +21,9 @@ ul {
 }
 
 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-header .site-title a {
@@ -41,8 +44,8 @@ ul {
 }
 
 .main-navigation .primary-menu {
-  display: flex !important;
-  flex-direction: row !important;
+  /* display: flex !important;
+  flex-direction: row !important; */
   /* list-style: none;
   display: flex;
   gap: 200px;
@@ -56,7 +59,7 @@ ul {
 }
 
 .iconItems {
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .hero {
@@ -71,12 +74,11 @@ ul {
 
 /* General styles */
 .main-navigation {
-  display: none; /* Hidden by default for mobile */
+  display: none;
   position: absolute;
   top: 60px;
   left: 0;
   width: 100%;
-  background: #333;
   color: #fff;
 }
 
@@ -119,5 +121,7 @@ ul {
   .main-navigation a {
     color: #333; /* Adjust link color for desktop */
     padding: 10px 15px;
+  }
+  .container {
   }
 }
