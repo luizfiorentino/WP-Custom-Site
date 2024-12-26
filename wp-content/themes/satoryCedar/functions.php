@@ -9,9 +9,17 @@ add_action( 'after_setup_theme', 'satory_tree_theme_setup' );
 
 // Additional functions
 function my_theme_enqueue_styles() {
-    wp_enqueue_style( 'my-theme-style', get_stylesheet_uri(), array(), time() ); 
+    // Enqueue Bootstrap CSS
+    wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), '5.3.2');
+    
+    // Enqueue Theme CSS 
+    wp_enqueue_style('my-theme-style', get_stylesheet_uri(), array('bootstrap-css'), time());
+
+    // Enqueue Bootstrap JS
+    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.2', true);
 }
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
 
 function subtitle_metabox() {
     add_meta_box(
@@ -42,6 +50,12 @@ function theme_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 
+function custom_shortcode( $atts , $content = null ) {
+    return '<div class="col-sm-4">' . $content . '</div>';
+}
+add_shortcode( 'one_third', 'custom_shortcode');
+
+?>
 
 
 
