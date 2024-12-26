@@ -50,11 +50,12 @@ function theme_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 
+if ( ! function_exists( 'custom_shortcode') ) :
 function custom_shortcode( $atts , $content = null ) {
     return '<div class="col-sm-4">' . $content . '</div>';
 }
 add_shortcode( 'one_third', 'custom_shortcode');
-
+endif;
 // To remove eg. WP's auto generated paragraph tags
 // remove_filter( 'the_content' , 'wpautop';)
 
