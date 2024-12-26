@@ -55,6 +55,9 @@ function custom_shortcode( $atts , $content = null ) {
 }
 add_shortcode( 'one_third', 'custom_shortcode');
 
+// To remove eg. WP's auto generated paragraph tags
+// remove_filter( 'the_content' , 'wpautop';)
+
 ?>
 
 
