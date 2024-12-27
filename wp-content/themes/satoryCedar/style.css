@@ -20,6 +20,10 @@ ul {
 .site-header {
 }
 
+.site-title {
+  font-family: "Playwrite TZ", sans-serif;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

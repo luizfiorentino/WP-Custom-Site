@@ -9,6 +9,9 @@ add_action( 'after_setup_theme', 'satory_tree_theme_setup' );
 
 // Additional functions
 function my_theme_enqueue_styles() {
+
+    // Google Fonts
+    wp_enqueue_style('playwrite-font', 'https://fonts.googleapis.com/css2?family=Playwrite+TZ+Guides&family=Playwrite+TZ:wght@100..400&display=swap', array(), null);
     // Enqueue Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), '5.3.2');
     
