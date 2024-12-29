@@ -1,3 +1,11 @@
+<?php 
+/**
+ * The template for displaying the header
+ * 
+ * @package satoryCedar
+ * @since Satory Cedar 1.0
+ */
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

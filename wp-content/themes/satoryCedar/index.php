@@ -1,3 +1,11 @@
+<?php 
+/**
+ * The main template file
+ * 
+ * @package satoryCedar
+ * @since Satory Cedar 1.0
+ */
+?>
 <?php get_header(); ?> 
 
 <div class="jumbotron  gradient-bg">
@@ -25,6 +33,4 @@
     </div> 
 </div>
 
-        <?php get_footer(); ?>
-    </body>
-</html>
+<?php get_footer(); ?>
