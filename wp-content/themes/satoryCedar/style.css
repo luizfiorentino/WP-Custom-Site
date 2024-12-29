@@ -35,6 +35,14 @@ ul {
   color: white;
 }
 
+.main-custom-nav {
+  border-radius: 0;
+}
+
+.main-custom-nav {
+  color: white;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

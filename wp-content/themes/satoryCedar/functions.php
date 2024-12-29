@@ -7,6 +7,12 @@ function satory_tree_theme_setup() {
 }
 add_action( 'after_setup_theme', 'satory_tree_theme_setup' );
 
+function customtheme_setup() {
+    register_nav_menus( array(
+        "secondary" => __("Secondary Menu" , "satoryCedar")
+    ))
+}
+
 // Additional functions
 function my_theme_enqueue_styles() {
 
