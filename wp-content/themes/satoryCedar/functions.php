@@ -2,7 +2,7 @@
 // Theme setup
 function satory_tree_theme_setup() {
     register_nav_menus( array(
-        'primary' => __( 'Primary Menu', 'satoryCedar' ),
+        'primary' => __( 'Primary Menu', 'satoryCedar' )
     ) );
 }
 add_action( 'after_setup_theme', 'satory_tree_theme_setup' );
@@ -10,24 +10,28 @@ add_action( 'after_setup_theme', 'satory_tree_theme_setup' );
 function customtheme_setup() {
     register_nav_menus( array(
         "secondary" => __("Secondary Menu" , "satoryCedar")
-    ))
+    ));
+    add_theme_support( "title-tag");
 }
+add_action('after_setup_theme', 'customtheme_setup');
 
 // Additional functions
 function my_theme_enqueue_styles() {
 
     // Google Fonts
     wp_enqueue_style('playwrite-font', 'https://fonts.googleapis.com/css2?family=Playwrite+TZ+Guides&family=Playwrite+TZ:wght@100..400&display=swap', array(), null);
+
     // Enqueue Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), '5.3.2');
     
     // Enqueue Theme CSS 
     wp_enqueue_style('my-theme-style', get_stylesheet_uri(), array('bootstrap-css'), time());
 
-    // Enqueue Bootstrap JS
+    // Enqueue Bootstrap JS (includes Popper.js via Bootstrap bundle)
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.2', true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
 
 
 function subtitle_metabox() {
@@ -54,10 +58,10 @@ function save_custom_meta_subtitle( $post_id ) {
 }
 add_action( 'save_post', 'save_custom_meta_subtitle' );
 
-function theme_enqueue_scripts() {
-    wp_enqueue_script( 'menu-toggle', get_template_directory_uri() . '/js/menu.js', array(), null, true );
-}
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
+// function theme_enqueue_scripts() {
+//     wp_enqueue_script( 'menu-toggle', get_template_directory_uri() . '/js/menu.js', array(), null, true );
+// }
+// add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 
 if ( ! function_exists( 'custom_shortcode') ) :
 function custom_shortcode( $atts , $content = null ) {
