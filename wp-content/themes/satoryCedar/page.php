@@ -18,7 +18,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
 
             <!-- <h2 class="text-center"><?php the_title(); ?></h2> -->
-            <h2><?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink())), '</a></h2>' ) ; ?></h2>
+            <h1><?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink())), '</a></h2>' ) ; ?></h1>
             <?php the_content(); ?>
 
             <?php endwhile; ?>
