@@ -43,11 +43,11 @@ ul {
   color: white;
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .site-header .site-title a {
   display: flex;
@@ -176,11 +176,11 @@ ul {
     color: #333; /* Adjust link color for desktop */
     padding: 10px 15px;
   }
-  .container {
+  /* .container {
     display: flex;
-    justify-content: space-between; /* Space between the title and menu */
-    align-items: center; /* Align items vertically */
-  }
+    justify-content: space-between; 
+    align-items: center; 
+  } */
   .primary-menu {
     /* border: 1px solid red; */
     margin-right: 18px;
