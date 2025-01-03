@@ -37,10 +37,6 @@ function my_theme_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
-
-
-
-
 function subtitle_metabox() {
     add_meta_box(
         'subtitle_metabox_id',             
@@ -78,6 +74,19 @@ add_shortcode( 'one_third', 'custom_shortcode');
 endif;
 // To remove eg. WP's auto generated paragraph tags
 // remove_filter( 'the_content' , 'wpautop';)
+
+function customtheme_widgets() {
+    register_sidebar( array (
+        'name' => __('Sidebar', 'customtheme'),
+        'id' => 'sidebar-1',
+        'description' => __('Add widgets here to appear in the sidebar', 'customtheme'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>'
+    ));
+}
+add_action('widgets_init', 'customtheme_widgets');
 
 ?>
 
